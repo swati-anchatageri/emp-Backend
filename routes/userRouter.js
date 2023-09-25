@@ -32,7 +32,7 @@ userRouter.post("/login",async(req,res)=>{
                     const token = jwt.sign({couser:"NEM"},"masai")
                     res.send({msg:"Login Successfull",token:token})
                 }else{
-                    res.send({error:err})
+                    res.send({msg:"Invalid Credentials"})
                 }
             })
         }else{
